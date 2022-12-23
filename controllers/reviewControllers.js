@@ -9,14 +9,14 @@ exports.getAllReviews = catchAsync(async (req, res, next) => {
         .sort()
         .limitFields()
         .paginate();
-    const tours = await features.query;
+    const reviews = await features.query;
 
     // SEND RESPONSE
     res.status(200).json({
         status: 'success',
-        results: tours.length,
+        results: reviews.length,
         data: {
-            tours
+            reviews
         }
     });
 });
@@ -37,6 +37,9 @@ exports.getReview = catchAsync(async (req, res, next) => {
 });
 
 exports.createReview = catchAsync(async (req, res, next) => {
+    //Allows for nested routes
+    if (!req.body.tour) req.body.tour = req.params.tourId;
+    if (!req.body.user) req.body.user = req.user.id;
     const newReview = await Review.create(req.body)
 
     res.status(201).json({
