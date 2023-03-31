@@ -6,6 +6,8 @@ Here is the link to the full documentation: https://documenter.getpostman.com/vi
 # Getting Started with Express
 
 This project was bootstrapped with [Express](https://github.com/expressjs/express).
+## Tours Front Page
+![image](https://user-images.githubusercontent.com/75647839/229229253-cc4acbb9-0b8b-4837-bdca-d655533a22d1.png)
 
 ## User Endpoints
 ![image](https://user-images.githubusercontent.com/75647839/229227895-2053d4e9-b051-472a-bab8-bb67bec5d32a.png)
